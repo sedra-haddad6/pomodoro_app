@@ -3,7 +3,7 @@ name: Build APK
 on:
   push:
     branches:
-      - main  # تأكد إنو اسم الفرع عندك main مو master
+      - main
 
 jobs:
   build:
@@ -16,12 +16,12 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17' # مناسبة لنسخة فلاتر تبعك
+          java-version: '17'
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0' # النسخة اللي طلبتها بمشروعك
+          flutter-version: '3.41.2'  # النسخة الصحيحة
 
       - name: Get dependencies
         run: flutter pub get
